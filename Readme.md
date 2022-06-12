@@ -4,7 +4,7 @@ As a data analysis intern, you have to analyze sports data for a client. You are
 
 ## Datasets:
 
-[I'm an inline-style link](https://www.google.com)
+
 
 ## About Data
 
@@ -142,7 +142,7 @@ SELECT * FROM matches
 WHERE result = 'tie'
 ORDER BY date DESC;
 ```
-![alt text](matches_desc.png)
+![alt text]("file:///C:/Users/aditya/task_2/matches_desc.PNG")
 
 11. Get the count of cities that have hosted an IPL match.
 ```sql
@@ -166,6 +166,7 @@ WHERE winner = 'Chennai Super Kings' OR winner = 'Mumbai Indians'
 GROUP BY winner;
 ```
 ![alt text](won_chennai_mumbai.png)
+
 14. No. Of matches played on or before 4/20/2014.
 ```sql
 SELECT COUNT(id) FROM matches
