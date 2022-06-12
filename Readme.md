@@ -2,15 +2,23 @@
 
 As a data analysis intern, you have to analyze sports data for a client. You are given two datasets related to IPL (Indian Premier League) cricket matches. One dataset contains ball-by-ball data, and the other contains match-wise data. You have to import the datasets into an SQL database and perform the tasks given in this assignment to find important insights from this dataset.
 
-## Datasets:
+## Datasets 
+
+[IPL_ball.csv](https://raw.githubusercontent.com/keerti4/sports-data-analysis-using-sql/master/IPL_Ball.csv)
+
+[IPL_matches.csv](https://github.com/keerti4/sports-data-analysis-using-sql/blob/master/IPL_matches.csv)
+
+### Code
+
+[codes_sql.sql](https://github.com/keerti4/sports-data-analysis-using-sql/blob/master/codes_sql.sql)
 
 
 
 ## About Data
 
-The first CSV file is for ball-by-ball data, and it has information on all the 193468 balls bowled between the years 2008 and 2020. It has 17 columns.
+The IPL_ball.csv file is for ball-by-ball data, and it has information on all the 193468 balls bowled between the years 2008 and 2020. It has 17 columns.
 
-The second file contains match-wise data and has data of 816 IPL matches. This table has 17 columns
+The IPL_matches.csv file contains match-wise data and has data of 816 IPL matches. This table has 17 columns.
 
 ## Project
 
@@ -142,21 +150,21 @@ SELECT * FROM matches
 WHERE result = 'tie'
 ORDER BY date DESC;
 ```
-![alt text]("file:///C:/Users/aditya/task_2/matches_desc.PNG")
+![matches_desc](https://user-images.githubusercontent.com/106272679/173230318-bdeea84d-13a8-48c4-b97b-a60f1a5bb533.PNG)
 
 11. Get the count of cities that have hosted an IPL match.
 ```sql
 SELECT COUNT(DISTINCT city) 
 FROM matches;
 ```
-![alt text](ipl_city.png)
+![ipl_city](https://user-images.githubusercontent.com/106272679/173230379-7dbe5283-eee8-499d-96f6-290d916473ef.PNG)
 
 12. Fetch data of all matches played in Rajiv Gandhi international stadium uppal.
 ```sql
 SELECT * FROM matches
 WHERE venue = 'Rajiv Gandhi International Stadium Uppal';
 ```
-![alt text](matches_rajivgandhi.png)
+![matches_rajivgandhi](https://user-images.githubusercontent.com/106272679/173230475-6bdce343-7bfa-4e51-a11b-5e6c0dec773a.PNG)
 
 13. Number of matches won by Chennai super king and Mumbai Indians.
 ```sql
@@ -165,14 +173,14 @@ FROM MATCHES
 WHERE winner = 'Chennai Super Kings' OR winner = 'Mumbai Indians'
 GROUP BY winner;
 ```
-![alt text](won_chennai_mumbai.png)
+![won_chennai_mumbai](https://user-images.githubusercontent.com/106272679/173230510-daf31a38-903e-4f8b-b120-259c8be7c162.PNG)
 
 14. No. Of matches played on or before 4/20/2014.
 ```sql
 SELECT COUNT(id) FROM matches
 WHERE date <= '2014-04-20';
 ```
-![alt text](matches_20apr14.png)
+![matches_20apr14](https://user-images.githubusercontent.com/106272679/173230532-8d117a37-af13-4f22-9c23-e4c13ab636dd.PNG)
 
 
 
